@@ -1,4 +1,6 @@
 import com.locedelop.testing.model.TestCase;
+import com.locedelop.testing.presenter.ConcreteTestingPresenter;
+import com.locedelop.testing.presenter.TestingPresenter;
 import com.locedelop.testing.view.ConsoleMultipleChoiceView;
 import com.locedelop.testing.view.MultipleChoiceView;
 
@@ -7,10 +9,10 @@ import com.locedelop.testing.view.MultipleChoiceView;
  */
 public class Main {
     public static void main(String[] args) {
-        TestCase testCase = TestCase.createSimpleTestCase();
-        System.out.println(testCase);
-
         MultipleChoiceView view = new ConsoleMultipleChoiceView();
-        view.showTestCaseOnScreen(testCase);
+
+        TestingPresenter presenter = new ConcreteTestingPresenter();
+        view.setPresenter(presenter);
+        view.
     }
 }

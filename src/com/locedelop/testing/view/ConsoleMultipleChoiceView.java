@@ -1,11 +1,14 @@
 package com.locedelop.testing.view;
 
 import com.locedelop.testing.model.TestCase;
+import com.locedelop.testing.presenter.TestingPresenter;
 
 /**
  * Created by Sergei Zarochentsev on 14.11.2015.
  */
 public class ConsoleMultipleChoiceView implements MultipleChoiceView {
+
+
     @Override
     public void showTestCaseOnScreen(TestCase testCase) {
         System.out.println(testCase.getQuestion());
@@ -15,6 +18,18 @@ public class ConsoleMultipleChoiceView implements MultipleChoiceView {
         System.out.println("2) " + testCase.getAnswer2());
         System.out.println("3) " + testCase.getAnswer3());
         System.out.println("4) " + testCase.getAnswer4());
+    }
+
+    private TestingPresenter testingPresenter;
+    @Override
+    public void setPresenter(TestingPresenter presenter) {
+        testingPresenter = presenter;
+        testingPresenter.setView(this);
+    }
+
+    @Override
+    public void startTest() {
+        testingPresenter.startTest();
     }
 
 }
