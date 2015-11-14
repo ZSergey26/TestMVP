@@ -15,6 +15,30 @@ public class TestCase {
 
     private int correctAnswer;
 
+    public String getQuestion() {
+        return question;
+    }
+
+    public String getAnswer1() {
+        return answer1;
+    }
+
+    public String getAnswer2() {
+        return answer2;
+    }
+
+    public String getAnswer3() {
+        return answer3;
+    }
+
+    public String getAnswer4() {
+        return answer4;
+    }
+
+    public int getCorrectAnswer() {
+        return correctAnswer;
+    }
+
     public TestCase(String question, String answer1, String answer2, String answer3, String answer4, int correctAnswer) {
         this.question = question;
         this.answer1 = answer1;
