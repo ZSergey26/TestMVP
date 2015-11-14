@@ -13,6 +13,6 @@ public class Main {
 
         TestingPresenter presenter = new ConcreteTestingPresenter();
         view.setPresenter(presenter);
-        view.
+        view.startTest();
     }
 }

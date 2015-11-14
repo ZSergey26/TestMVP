@@ -12,4 +12,6 @@ public interface MultipleChoiceView {
     void setPresenter(TestingPresenter presenter);
 
     void startTest();
+
+    void showResult(double correctPercent);
 }

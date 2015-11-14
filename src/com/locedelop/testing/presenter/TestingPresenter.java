@@ -1,5 +1,6 @@
 package com.locedelop.testing.presenter;
 
+import com.locedelop.testing.model.TestCase;
 import com.locedelop.testing.view.MultipleChoiceView;
 
 /**
@@ -11,4 +12,8 @@ public interface TestingPresenter {
     void userAnswer(int answer);
 
     void setView(MultipleChoiceView view);
+
+    void notifyNewQuestion(TestCase testCase);
+
+    void resultNotify(double correctPercent);
 }
